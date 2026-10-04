@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖軒&雅瀞婚禮邀請</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti for warm celebration effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosewood: '#8B4A4C',
+                        blush: '#FDF7F5',
+                        warmchampagne: '#E8D5C4',
+                        goldaccent: '#D4AF37',
+                        softterracotta: '#C86D51',
+                        charcoal: '#333333'
+                    },
+                    fontFamily: {
+                        serifTC: ['"Noto Serif TC"', 'serif'],
+                        garamond: ['"Cormorant Garamond"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Serif TC', serif;
+            background-color: #FAF6F3;
+            color: #333333;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(250, 246, 243, 0.25), rgba(250, 246, 243, 0.95)), url('https://i.postimg.cc/W4Dx5vyC/ABC00054.jpg');
+            background-size: cover;
+            background-position: 25% 35%;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 213, 196, 0.6);
+        }
+        .text-glow {
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+        }
+        @keyframes floatHeart {
+            0% { transform: translateY(0) scale(0.8); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+        }
+        .heart-particle {
+            position: absolute;
+            pointer-events: none;
+            animation: floatHeart 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800 leading-relaxed selection:bg-warmchampagne selection:text-rosewood relative min-h-screen">
+
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card shadow-sm py-3 px-4 md:px-8 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-heart text-softterracotta text-lg animate-pulse"></i>
+            <span class="font-serifTC font-semibold text-gray-800 text-sm md:text-base tracking-wider">Steve & Coco</span>
+        </div>
+        <a href="#rsvp-form-section" class="bg-softterracotta hover:bg-rosewood text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-1.5">
+            <i class="fa-regular fa-paper-plane"></i> 出席回覆
+        </a>
+    </header>
+
+    <section class="relative min-h-screen hero-bg flex items-center justify-center pt-24 pb-12 px-4 overflow-hidden">
+        <div class="max-w-3xl w-full text-center z-10 flex flex-col items-center">
+            
+            <!-- Frame Container for Cover Image -->
+            <div class="relative p-1 md:p-1.5 bg-white/90 rounded-2xl shadow-2xl mb-8 transform hover:scale-[1.01] transition-all duration-500 max-w-lg w-full border border-warmchampagne">
+                <div class="overflow-hidden rounded-xl relative group">
+                    <img src="https://i.postimg.cc/W4Dx5vyC/ABC00054.jpg" onerror="this.src='https://placehold.co/600x800/E8D5C4/8B4A4C?text=Steve+%26+Coco'" alt="婚禮封面照片" class="w-full h-[380px] md:h-[450px] object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: 25% 30%;">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-0 right-0 text-white font-garamond text-lg italic tracking-widest">
+                        Jibao's story 77
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div>
+                    <span class="inline-block bg-[#E8D5C4]/80 text-rosewood text-xs md:text-sm font-semibold tracking-[0.12em] px-3.5 py-1 rounded-sm">
+                        城市的軒囂裡 有種屬於我們的瀞
+                    </span>
+                </div>
+                <h1 class="font-serifTC text-3xl md:text-5xl font-bold text-gray-800 tracking-wide">
+                    Sheng-Hsuan & Ya-Jing
+                </h1>
+                <p class="font-garamond text-2xl md:text-3xl text-rosewood italic font-medium">
+                    2027 . 02 . 21
+                </p>
+            </div>
+
+            <div class="mt-10 w-full max-w-xl">
+                <div class="glass-card rounded-2xl p-6 shadow-xl border border-warmchampagne text-center">
+                    <div class="flex items-center justify-center gap-2 mb-4 text-softterracotta font-semibold text-sm tracking-widest uppercase">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>THE COUNTDOWN</span>
+                    </div>
+                    
+                    <div id="countdown" class="grid grid-cols-4 gap-2 md:gap-4 text-center">
+                        <div class="bg-white/90 p-3 md:p-4 rounded-xl shadow-sm border border-pink-100">
+                            <span id="days" class="block font-garamond text-2xl md:text-4xl font-bold text-rosewood">00</span>
+                            <span class="text-xs text-gray-500 font-serifTC">天</span>
+                        </div>
+                        <div class="bg-white/90 p-3 md:p-4 rounded-xl shadow-sm border border-pink-100">
+                            <span id="hours" class="block font-garamond text-2xl md:text-4xl font-bold text-rosewood">00</span>
+                            <span class="text-xs text-gray-500 font-serifTC">時</span>
+                        </div>
+                        <div class="bg-white/90 p-3 md:p-4 rounded-xl shadow-sm border border-pink-100">
+                            <span id="minutes" class="block font-garamond text-2xl md:text-4xl font-bold text-rosewood">00</span>
+                            <span class="text-xs text-gray-500 font-serifTC">分</span>
+                        </div>
+                        <div class="bg-white/90 p-3 md:p-4 rounded-xl shadow-sm border border-pink-100">
+                            <span id="seconds" class="block font-garamond text-2xl md:text-4xl font-bold text-rosewood">00</span>
+                            <span class="text-xs text-gray-500 font-serifTC">秒</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warm Poem / Message -->
+            <div class="mt-8 max-w-md w-full text-center text-sm md:text-base space-y-2 leading-relaxed bg-white/60 p-6 rounded-xl backdrop-blur-sm border border-warmchampagne/50 shadow-sm">
+                <p class="text-gray-800 font-medium">在吉寶的日子裡</p>
+                <p><span class="text-softterracotta font-bold">陪伴</span><span class="text-gray-800 font-medium">是最長情的告白</span></p>
+            </div>
+
+            <div class="mt-8 animate-bounce">
+                <a href="#wedding-info" class="text-softterracotta hover:text-rosewood transition-colors">
+                    <i class="fa-solid fa-chevron-down text-xl"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="wedding-info" class="py-16 px-4 max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+            <span class="text-softterracotta text-xs font-semibold tracking-widest uppercase">Wedding Event</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serifTC mt-1">喜宴時間與地點</h2>
+            <div class="w-12 h-0.5 bg-softterracotta mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="glass-card bg-white/90 p-8 md:p-12 rounded-3xl shadow-xl border border-warmchampagne text-center space-y-8">
+            <!-- Date & Time Block -->
+            <div class="border-b border-warmchampagne/60 pb-8 space-y-3">
+                <p class="text-xs uppercase tracking-[0.2em] text-softterracotta font-semibold">Date & Time</p>
+                <h3 class="text-2xl md:text-3xl font-bold text-rosewood font-serifTC">
+                    2027 年 2 月 21 日 <span class="text-lg md:text-2xl font-normal text-gray-700">(星期日)</span>
+                </h3>
+                <div class="flex items-center justify-center gap-4 text-sm md:text-base text-gray-700 font-medium pt-1">
+                    <span><strong class="text-rosewood font-bold">11:30</strong> 賓客入席</span>
+                    <span class="text-warmchampagne">|</span>
+                    <span><strong class="text-rosewood font-bold">12:00</strong> 準時開席</span>
+                </div>
+            </div>
+
+            <!-- Venue Block -->
+            <div class="space-y-4 pt-2">
+                <p class="text-xs uppercase tracking-[0.2em] text-softterracotta font-semibold">Location</p>
+                <div>
+                    <h4 class="text-2xl md:text-3xl font-bold text-gray-800 font-serifTC">Mega 50 百揚大樓</h4>
+                    <p class="text-rosewood font-semibold text-lg md:text-xl mt-1">48樓 鼎鼎宴會 A廳</p>
+                </div>
+                <p class="text-gray-600 text-sm max-w-md mx-auto leading-relaxed">
+                    新北市板橋區縣民大道二段7號48樓<br><span class="text-xs text-gray-500">(遠東百貨板橋中山店旁 / 百揚大樓)</span>
+                </p>
+                <div class="pt-3">
+                    <a href="https://maps.google.com/?q=Mega+50+餐飲及宴會+48樓+鼎鼎宴會廳" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center gap-2 bg-rosewood hover:bg-softterracotta text-white font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all text-sm tracking-wide">
+                        <i class="fa-solid fa-map-location-dot"></i> 開啟 Google 地圖導航
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-4xl mx-auto">
+        <div class="glass-card bg-white/90 p-6 md:p-10 rounded-3xl shadow-xl border border-warmchampagne">
+            <div class="text-center mb-10">
+                <span class="text-softterracotta text-xs font-semibold tracking-widest uppercase">Location & Transit</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serifTC mt-1">交通與停車指南</h2>
+                <p class="text-gray-500 text-sm mt-2">為利您順利抵達會場，以下提供多元交通方式參考</p>
+                <div class="w-12 h-0.5 bg-softterracotta mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Transit Tabs Container -->
+            <div class="bg-blush/60 p-2 rounded-2xl border border-warmchampagne mb-8 flex flex-wrap justify-center gap-2">
+                <button onclick="switchTab('mrt')" id="tab-mrt" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 bg-white text-rosewood shadow-sm">
+                    <i class="fa-solid fa-train-subway"></i> 捷運
+                </button>
+                <button onclick="switchTab('rail')" id="tab-rail" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 text-gray-600 hover:text-rosewood">
+                    <i class="fa-solid fa-train"></i> 台鐵 / 高鐵
+                </button>
+                <button onclick="switchTab('highway')" id="tab-highway" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 text-gray-600 hover:text-rosewood">
+                    <i class="fa-solid fa-car"></i> 國道開車
+                </button>
+                <button onclick="switchTab('bus')" id="tab-bus" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 text-gray-600 hover:text-rosewood">
+                    <i class="fa-solid fa-bus"></i> 公車資訊
+                </button>
+                <button onclick="switchTab('parking')" id="tab-parking" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 text-gray-600 hover:text-rosewood">
+                    <i class="fa-solid fa-square-parking"></i> 停車場
+                </button>
+            </div>
+
+            <!-- Tab Content Blocks -->
+            <div class="bg-white/80 rounded-2xl p-6 md:p-8 border border-warmchampagne/80 shadow-sm min-h-[220px]">
+                
+                <!-- MRT -->
+                <div id="content-mrt" class="tab-content space-y-4">
+                    <h4 class="font-bold text-gray-800 text-base flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-softterracotta"></span> 捷運搭乘方式
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                            <p class="font-semibold text-rosewood mb-1">板南線 板橋站</p>
+                            <p>從 <span class="bg-warmchampagne/40 px-1.5 py-0.5 rounded text-gray-800 font-medium">A3 出口</span> 由地下通道，經大遠百前往「百揚大樓」。</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                            <p class="font-semibold text-rosewood mb-1">環狀線 板橋站</p>
+                            <p>從 <span class="bg-warmchampagne/40 px-1.5 py-0.5 rounded text-gray-800 font-medium">4號出口</span> 朝大遠百方向前往「百揚大樓」。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAIL -->
+                <div id="content-rail" class="tab-content hidden space-y-4">
+                    <h4 class="font-bold text-gray-800 text-base flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-softterracotta"></span> 台鐵 / 高鐵搭乘方式
+                    </h4>
+                    <div class="p-4 rounded-xl bg-gray-50 border border-gray-100 text-sm text-gray-700">
+                        <p class="font-semibold text-rosewood mb-1">高鐵 / 台鐵 板橋站</p>
+                        <p>抵達板橋站後，請由 <span class="bg-warmchampagne/40 px-1.5 py-0.5 rounded text-gray-800 font-medium">東出口</span> 出站，由地下通道經大遠百，順指標前往「百揚大樓」。</p>
+                    </div>
+                </div>
+
+                <!-- HIGHWAY -->
+                <div id="content-highway" class="tab-content hidden space-y-4">
+                    <h4 class="font-bold text-gray-800 text-base flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-softterracotta"></span> 國道 / 自行開車路線
+                    </h4>
+                    <div class="p-4 rounded-xl bg-gray-50 border border-gray-100 text-sm text-gray-700">
+                        <p class="font-semibold text-rosewood mb-1">高速公路規劃</p>
+                        <p>走 <strong>國道 3 號</strong> 行至中和交流道，接 <strong>64 號快速道路</strong>（往板橋民生出口），往縣民大道與中山路方向行駛至百揚大樓。</p>
+                    </div>
+                </div>
+
+                <!-- BUS -->
+                <div id="content-bus" class="tab-content hidden space-y-4">
+                    <h4 class="font-bold text-gray-800 text-base flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-softterracotta"></span> 公車路線與停靠站
+                    </h4>
+                    <div class="space-y-3 text-sm text-gray-700">
+                        <p><strong>鄰近停靠站點：</strong>新北市府站 / 縣民大道站 / 板橋公車站</p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">51</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">57</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">99</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">234</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">245</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">264</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">307</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">651</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">657</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">667</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">701</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">705</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">812</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">813</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">982</span>
+                            <span class="bg-blush border border-warmchampagne text-rosewood text-xs px-2.5 py-1 rounded-md font-medium">藍 37</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PARKING -->
+                <div id="content-parking" class="tab-content hidden space-y-4">
+                    <h4 class="font-bold text-gray-800 text-base flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-softterracotta"></span> 停車資訊
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div class="p-4 rounded-xl bg-blush/80 border border-warmchampagne">
+                            <p class="font-bold text-rosewood mb-1">🅿️ 百揚大樓地上停車場</p>
+                            <p class="text-gray-700">由 <strong>中山路入口</strong> 進入，停車樓層為 <strong>4F - 8F</strong>。</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                            <p class="font-bold text-gray-800 mb-1">🅿️ 其他周邊停車場（皆需自費）</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>板橋大遠百停車場（漢生東路入口）</li>
+                                <li>市民廣場停車場</li>
+                                <li>光仁停車場</li>
+                                <li>板橋車站停車場</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp-form-section" class="py-20 px-4 max-w-2xl mx-auto">
+        <div class="glass-card rounded-3xl p-6 md:p-10 shadow-2xl border border-warmchampagne relative overflow-hidden">
+
+            <div class="text-center mb-8 relative z-10">
+                <span class="text-softterracotta text-xs font-semibold tracking-widest uppercase">Attendance Confirmation</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 font-serifTC mt-1">出席意願回函</h2>
+                <div class="w-16 h-0.5 bg-softterracotta mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Form -->
+            <form id="weddingForm" onsubmit="handleFormSubmit(event)" class="space-y-6 relative z-10">
+                
+                <!-- 1. 姓名 NAME -->
+                <div>
+                    <label for="guestName" class="block text-sm font-semibold text-gray-700 mb-1">
+                        姓名 NAME <span class="text-rosewood">*</span>
+                    </label>
+                    <input type="text" id="guestName" required placeholder="請輸入您的真實姓名" 
+                           class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 focus:border-softterracotta outline-none transition-all text-sm bg-white/80">
+                </div>
+
+                <!-- 2. 聯絡電話 PHONE 或電子信箱 EMAIL -->
+                <div>
+                    <label for="contactInfo" class="block text-sm font-semibold text-gray-700 mb-1">
+                        聯絡電話 PHONE 或電子信箱 EMAIL <span class="text-rosewood">*</span>
+                    </label>
+                    <input type="text" id="contactInfo" required placeholder="請輸入您的電話號碼或 Email" 
+                           class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 focus:border-softterracotta outline-none transition-all text-sm bg-white/80">
+                </div>
+
+                <!-- 3. 與新人的關係 RELATIONSHIP -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        與新人的關係 RELATIONSHIP <span class="text-rosewood">*</span>
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="男方家人、親戚" required class="accent-softterracotta">
+                            <span class="text-xs font-semibold">男方家人、親戚</span>
+                        </label>
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="女方家人、親戚" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">女方家人、親戚</span>
+                        </label>
+
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="男方長輩的親友" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">男方長輩的親友</span>
+                        </label>
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="女方長輩的親友" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">女方長輩的親友</span>
+                        </label>
+
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="男方同事、長官" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">男方同事、長官</span>
+                        </label>
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="女方同事、長官" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">女方同事、長官</span>
+                        </label>
+
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="男方同學、好友" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">男方同學、好友</span>
+                        </label>
+                        <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-left hover:bg-blush transition-all flex items-center gap-2 has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="relationship" value="女方同學、好友" class="accent-softterracotta">
+                            <span class="text-xs font-semibold">女方同學、好友</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 4. 是否參加 JOIN US -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        是否參加 JOIN US <span class="text-rosewood">*</span>
+                    </label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="cursor-pointer border border-gray-200 p-3.5 rounded-xl text-center hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="attendance" value="使命必達，出席!" required onchange="toggleAttendanceFields(true)" class="hidden">
+                            <span class="text-sm font-semibold block">使命必達，出席!</span>
+                        </label>
+                        <label class="cursor-pointer border border-gray-200 p-3.5 rounded-xl text-center hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                            <input type="radio" name="attendance" value="時辰撞期，祝福!" onchange="toggleAttendanceFields(false)" class="hidden">
+                            <span class="text-sm font-semibold block">時辰撞期，祝福!</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Dynamic Attending Options -->
+                <div id="attendingDetails" class="space-y-5 pt-2 border-t border-gray-100">
+                    
+                    <!-- Guest Counts -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- 5. 參加人數(大人) -->
+                        <div>
+                            <label for="adultCount" class="block text-sm font-semibold text-gray-700 mb-1">
+                                參加人數(大人)<br><span class="text-xs text-gray-500 font-normal">ADULTS</span>
+                            </label>
+                            <select id="adultCount" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 outline-none text-sm bg-white/80">
+                                <option value="0" selected>0 位</option>
+                                <option value="1">1 位</option>
+                                <option value="2">2 位</option>
+                                <option value="3">3 位</option>
+                                <option value="4">4 位</option>
+                                <option value="5">5 位</option>
+                                <option value="6">6 位</option>
+                                <option value="7">7 位</option>
+                                <option value="8">8 位</option>
+                                <option value="9">9 位</option>
+                                <option value="10">10 位</option>
+                            </select>
+                        </div>
+                        <!-- 6. 參加人數(小孩) -->
+                        <div>
+                            <label for="childCount" class="block text-sm font-semibold text-gray-700 mb-1">
+                                參加人數(小孩)<br><span class="text-xs text-gray-500 font-normal">CHILDREN</span>
+                            </label>
+                            <select id="childCount" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 outline-none text-sm bg-white/80">
+                                <option value="0" selected>0 位</option>
+                                <option value="1">1 位</option>
+                                <option value="2">2 位</option>
+                                <option value="3">3 位</option>
+                                <option value="4">4 位</option>
+                                <option value="5">5 位</option>
+                                <option value="6">6 位</option>
+                                <option value="7">7 位</option>
+                                <option value="8">8 位</option>
+                                <option value="9">9 位</option>
+                                <option value="10">10 位</option>
+                            </select>
+                        </div>
+                        <!-- 7. 兒童座椅需求數 -->
+                        <div>
+                            <label for="babyChairCount" class="block text-sm font-semibold text-gray-700 mb-1">
+                                兒童座椅需求數<br><span class="text-xs text-gray-500 font-normal">HIGHCHAIR</span>
+                            </label>
+                            <select id="babyChairCount" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 outline-none text-sm bg-white/80">
+                                <option value="0" selected>0 張</option>
+                                <option value="1">1 張</option>
+                                <option value="2">2 張</option>
+                                <option value="3">3 張</option>
+                                <option value="4">4 張</option>
+                                <option value="5">5 張</option>
+                                <option value="6">6 張</option>
+                                <option value="7">7 張</option>
+                                <option value="8">8 張</option>
+                                <option value="9">9 張</option>
+                                <option value="10">10 張</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 8. 飲食需求 DIETARY -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            飲食需求 DIETARY
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-center hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                                <input type="radio" name="dietary" value="葷食 (Meat)" checked class="accent-softterracotta">
+                                <span class="text-xs font-semibold block mt-1">葷食 (Meat)</span>
+                            </label>
+                            <label class="cursor-pointer border border-gray-200 p-3 rounded-xl text-center hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta has-[:checked]:text-rosewood">
+                                <input type="radio" name="dietary" value="全素 (Vegan)" class="accent-softterracotta">
+                                <span class="text-xs font-semibold block mt-1">全素 (Vegan)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 9. 喜帖 INVITATION -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            喜帖 INVITATION
+                        </label>
+                        <div class="space-y-2">
+                            <label class="cursor-pointer border border-gray-200 p-3 rounded-xl flex items-center gap-2 hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta">
+                                <input type="radio" name="invitationType" value="請寄「紙本」喜帖" onchange="toggleAddressField(true)" class="accent-softterracotta">
+                                <span class="text-xs font-semibold text-gray-700">請寄「紙本」喜帖</span>
+                            </label>
+                            <label class="cursor-pointer border border-gray-200 p-3 rounded-xl flex items-center gap-2 hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta">
+                                <input type="radio" name="invitationType" value="請寄「電子」喜帖" checked onchange="toggleAddressField(false)" class="accent-softterracotta">
+                                <span class="text-xs font-semibold text-gray-700">請寄「電子」喜帖</span>
+                            </label>
+                            <label class="cursor-pointer border border-gray-200 p-3 rounded-xl flex items-center gap-2 hover:bg-blush transition-all has-[:checked]:bg-blush has-[:checked]:border-softterracotta">
+                                <input type="radio" name="invitationType" value="資訊詳細不用寄喔！" onchange="toggleAddressField(false)" class="accent-softterracotta">
+                                <span class="text-xs font-semibold text-gray-700">資訊詳細不用寄喔！</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Mailing Address (Shown if Paper Invitation selected) -->
+                    <div id="addressField" class="hidden">
+                        <label for="mailingAddress" class="block text-sm font-semibold text-gray-700 mb-1">
+                            喜帖郵寄地址 MAILING ADDRESS
+                        </label>
+                        <input type="text" id="mailingAddress" placeholder="請填寫郵遞區號與完整收件地址" 
+                               class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 outline-none transition-all text-sm bg-white/80">
+                    </div>
+
+                </div>
+
+                <!-- 10. 祝福的話 BLESSINGS -->
+                <div>
+                    <label for="blessings" class="block text-sm font-semibold text-gray-700 mb-1">
+                        給新人的幸福祝福悄悄話
+                    </label>
+                    <textarea id="blessings" rows="3" placeholder="寫下想對我們說的話或給我們的祝福吧..." 
+                              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-softterracotta/40 focus:border-softterracotta outline-none transition-all text-sm bg-white/80 resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn" 
+                        class="w-full bg-softterracotta hover:bg-rosewood text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-base tracking-wider">
+                    <i class="fa-solid fa-paper-plane"></i> 送出出席回覆 Confirmation
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div class="glass-card bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
+            <div class="w-16 h-16 bg-rosewood/10 text-rosewood rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-serifTC text-gray-800">已收到您的回覆！</h3>
+            <p class="text-sm text-gray-600 leading-relaxed" id="thankYouMsg">
+                非常感謝您的撥冗回覆，我們滿懷喜悅期待在 2027 年 2 月 21 日與您共享美好時光！
+            </p>
+            <button onclick="closeModal()" class="w-full bg-softterracotta hover:bg-rosewood text-white font-medium py-2.5 rounded-xl transition-all shadow text-sm">
+                關閉視窗 Close
+            </button>
+        </div>
+    </div>
+
+    <footer class="text-center py-8 text-xs text-gray-500 border-t border-warmchampagne/40 bg-white/40">
+        <p class="font-garamond text-sm text-rosewood italic font-semibold">Sheng-Hsuan & Ya-Jing Wedding Celebration</p>
+        <p class="mt-1">© 2027 Sheng-Hsuan & Ya-Jing. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 設定目標時間為 2027 年 2 月 21 日 12:00:00 (JavaScript 月份為 0-11，故 1 代表 2 月)
+        const weddingDate = new Date(2027, 1, 21, 12, 0, 0).getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-rosewood font-bold text-lg'>喜宴今日舉行，歡迎前來！</div>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        function switchTab(tabKey) {
+            const tabs = ['mrt', 'rail', 'highway', 'bus', 'parking'];
+            tabs.forEach(key => {
+                const btn = document.getElementById(`tab-${key}`);
+                const content = document.getElementById(`content-${key}`);
+                if (key === tabKey) {
+                    btn.className = "tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 bg-white text-rosewood shadow-sm";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2 text-gray-600 hover:text-rosewood";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        function toggleAttendanceFields(attending) {
+            const details = document.getElementById('attendingDetails');
+            if (attending) {
+                details.classList.remove('hidden');
+            } else {
+                details.classList.add('hidden');
+            }
+        }
+
+        function toggleAddressField(show) {
+            const addressField = document.getElementById('addressField');
+            if (show) {
+                addressField.classList.remove('hidden');
+            } else {
+                addressField.classList.add('hidden');
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('guestName').value;
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Show loading indicator on button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 傳送中...`;
+
+            setTimeout(() => {
+                // Confetti explosion
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 120,
+                        spread: 70,
+                        origin: { y: 0.6 },
+                        colors: ['#8B4A4C', '#D4AF37', '#C86D51', '#E8D5C4']
+                    });
+                }
+
+                // Show Thank You Modal
+                const modal = document.getElementById('thankYouModal');
+                const modalContent = document.getElementById('modalContent');
+                const msg = document.getElementById('thankYouMsg');
+
+                msg.innerText = `親愛的 ${name}，非常感謝您的撥冗回覆！我們已記下您的寶貴訊息，期待 2027 年 2 月 21 日與您相見！`;
+
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> 送出出席回覆 Confirmation`;
+            }, 800);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('thankYouModal');
+            const modalContent = document.getElementById('modalContent');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+        }
+    </script>
+</body>
+</html>
